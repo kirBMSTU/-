@@ -1,0 +1,3 @@
+SubjectID|Int|Subject|String
+1|Физика
+2|Литература

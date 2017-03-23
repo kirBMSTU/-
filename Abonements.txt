@@ -1,0 +1,3 @@
+StudentID|Int|BookID|Int|OutDate|String|InDate|String
+1|333|20/01|20/02
+2|334|22/10|7/11

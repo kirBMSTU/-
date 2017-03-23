@@ -1,0 +1,4 @@
+StudentID|Int|Name|String|Group|String
+1|Ивановpidr|ИУ5-22
+2|Петров|Э5-33
+3|Сидоров|МТ10-32

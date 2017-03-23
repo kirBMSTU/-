@@ -1,0 +1,3 @@
+BookID|Int|Title|Int|SubjectID|Int|Quantity|Int|Number|Int
+1|Война и мир|2|50|20
+2|Стихи|2|20|5
