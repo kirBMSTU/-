@@ -40,10 +40,10 @@ int main()
 
 	Tables tables;
 	readTables("DBtables", tables);
-	cout << tables.size();
-	//for (int i = 0; i < tables.size()-1; i++) {
-		//printTable(tables[i]);
-	//}
+	cout << "Количество таблиц:" << tables.size() << endl;
+	for (int i = 0; i < tables.size(); i++) 
+		printTable(tables[i]);
+	
 
     return 0;
 }
@@ -78,10 +78,10 @@ void readTables(string hdr_tabName, Tables &tables) {
 	while (token = strtok_s(nexttoken, "|", &nexttoken)) 
 		h.push_back(token);
 	
-	for (int i = 0; i < h.size()-1; i++) {
+	for (int i = 0; i < h.size(); i++) {
 		DBtable temp;
 		temp.tableName = h[i];
-		readTable(temp.tableName, tables[i]);
+		readTable(temp.tableName, temp);
 		tables.push_back(temp);
 	}
 	
@@ -118,7 +118,7 @@ void readTable(string tabName, DBtable& table) {
 }
 
 void printTable(DBtable& table) {
-	cout << endl << setw(20) << "TABLE NAME:" << table.tableName << endl;
+	cout << setw(20) << "TABLE NAME:" << table.tableName << endl;
 	for (auto it = table.columnHeaders.begin(); it != table.columnHeaders.end(); ++it) 
 		cout << setw(10) << it->first << " ";
 	cout << endl;
@@ -135,5 +135,5 @@ void printTable(DBtable& table) {
 		}
 		cout << endl;
 	}
-
+	cout << endl;
 }
